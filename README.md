@@ -1,58 +1,29 @@
 # Student Management System
 
-A simple Vue.js frontend application for managing student records. It uses browser localStorage so student data remains available after refreshing the page.
+A simple Vue.js CRUD application made for a school assignment. It manages student records in the browser with localStorage.
 
 ## Features
 
-- Add, view, edit, and delete student records
-- Validate required fields and email format
-- Search by student ID, name, email, or course
-- Keep records when the browser is refreshed
-- Responsive dashboard design for desktop, tablet, and mobile
-- Success notifications and a student details modal
+- Add student
+- View students
+- Edit student
+- Delete student
+- Search student
+- Save records in localStorage
 
-## Technologies
-
-- Vue.js 3
-- JavaScript
-- HTML
-- CSS
-- localStorage
-- Vite
-
-No backend, API, authentication, database, or additional state-management packages are used.
-
-## Installation
+## Run the project
 
 ```sh
 npm install
-```
-
-## Running the project
-
-```sh
 npm run dev
 ```
 
-Open the local URL shown by Vite in your browser.
+## How CRUD works
 
-## Production build
+- **Create:** Add a student with the form.
+- **Read:** Display all students in the table.
+- **Update:** Edit a student and choose Update Student.
+- **Delete:** Confirm the deletion and remove the student.
+- **Search:** Filter students by Student ID, Name, or Course.
 
-```sh
-npm run build
-```
-
-The application stores records under the `students` key in localStorage. Sample records are created only when no saved records exist. Clearing browser storage removes all records.
-
-## GitHub preparation
-
-Run these commands after reviewing the project:
-
-```sh
-git init
-git add .
-git commit -m "Create Student Management CRUD System"
-git branch -M main
-```
-
-Do not run `git push` because the target GitHub repository is not configured.
+The `students` key is used to save the student list in localStorage. Refreshing the browser keeps the saved records.
